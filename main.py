@@ -1,9 +1,9 @@
 from random import randint
-
 from graphic_arts.start_game_banner import run_screensaver
 
 
 def attack(char_name: str, char_class: str):
+    """Атакуем."""
     if char_class == 'warrior':
         return f'{char_name} нанёс урон противнику равный {5 + randint(3, 5)}'
 
@@ -16,6 +16,7 @@ def attack(char_name: str, char_class: str):
 
 
 def defence(char_name: str, char_class: str):
+    """Защищаемся."""
     if char_class == 'warrior':
         return f'{char_name} блокировал {10 + randint(5, 10)} урона'
 
@@ -27,6 +28,7 @@ def defence(char_name: str, char_class: str):
 
 
 def special(char_name: str, char_class: str):
+    """Специалимся."""
     if char_class == 'warrior':
         return f'{char_name} применил специальное умение ' \
                f'«Выносливость {80 + 25}»'
@@ -41,6 +43,7 @@ def special(char_name: str, char_class: str):
 
 
 def start_training(char_name: str, char_class: str):
+    """Тренируемся."""
     if char_class == 'warrior':
         print(f'{char_name}, ты Воитель — отличный боец '
               f'ближнего боя.')
@@ -77,6 +80,7 @@ def start_training(char_name: str, char_class: str):
 
 
 def choice_char_class():
+    """Выбираем."""
     approve_choice = None
     char_class = None
 
@@ -106,6 +110,7 @@ def choice_char_class():
 
 
 def main():
+    """Запускаем."""
     run_screensaver()
 
     print('Приветствую тебя, искатель приключений!')
